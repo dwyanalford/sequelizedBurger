@@ -7,7 +7,7 @@
     "body-parser": "^1.17.2",
     "express": "^4.15.3",
     "express-handlebars": "^3.0.0",
-    "handlebars": "^4.0.8",
+    "method-override": "^2.3.9",
     "mysql": "^2.13.0",
     "sequelize": "^3.30.4"
   },
@@ -19,7 +19,7 @@
     "type": "git",
     "url": "git+https://github.com/dwyanalford/hereandnow.git"
   },
-  "author": "Dwyan, Lungisa, Rafic, Dereck",
+  "author": "Dwyan Alford",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/dwyanalford/hereandnow/issues"

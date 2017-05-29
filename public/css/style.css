@@ -1,0 +1,31 @@
+#bg-color{
+	background-color: #FECC5E;
+	width: 100%;
+	height: auto;
+}
+.row {
+	padding-top: 30px;
+}
+.container div > h1 {
+	text-align: center
+}
+#task-date-complete {
+	font-size: 12px;
+	overflow: hidden;
+	width: 143px;
+	color: #4479A1;
+}
+#task-completed-text {
+	font-weight: bold;
+	font-size: 16px; 
+}
+.white {
+	background-color: #ffffff;
+	width: 300px;
+	height: 400px;
+	overflow: scroll;
+	border: 3px dashed #E98B5A;
+}
+button {
+	cursor: pointer;
+}

@@ -1,50 +1,56 @@
 
     <div class="container">
-      <div class="row"><h1><span class="glyphicon glyphicon-tasks" aria-hidden="true"></span>&nbsp;Tasks App by Dwyan</h1></div>
+      <div class="row">
+        <div class="col-md-4"></div>
+        <div class="col-md-4">
+          <img src="images/vegan-burger.jpg" width="150" height="100">
+          <h3>EAT DA BURGER</h3>
+        </div>
+        <div class="col-md-4"></div>
+      </div>
       <div class="row">
         <div class="col-md-1 border_right"></div>
         
         <div class="col-md-3 border_right white">
-          <h3>Tasks To Do</h3>
+          <h3>Burgers</h3>
 
           <ol>
-            {{#each tasks}}
-              {{#unless this.completed}}
-                <li>{{this.task}}</li>
-                <form action="/{{this.id}}?_method=PUT" method="POST">
-                    <input type="hidden" name="completed" value="true">
-                    <button type="submit">complete</button>
+            {{#each burgers}}
+              {{#unless this.devoured}}
+                <li>{{this.burgers}}</li>
+                <form action="/{{this.id}}" method="POST">
+                    <input type="hidden" name="devoured" value="true">
+                    <button type="submit">devour it!</button>
                   </form>
               {{/unless}}
             {{/each}}
           </ol>
 
         </div>
-        {{!-- add task here in this column --}}
+        {{!-- add burger here in this column --}}
         <div class="col-md-4 border_right">
-          <h2>Add a Task</h2>
+          <h2>Add a Burger</h2>
           <form class="create-update-form" action="/" method="POST">
 
             <div class="form-group">
-              <label for="enterTask">Entry:</label>
-              <input type="text" id="enterTask" name="name">
+              <label for="enterBurger">Entry:</label>
+              <input type="text" name="newBurger">
             </div>
 
-            <button type="submit">Add Task</button>
+            <button id="addBurgerButton" type="submit">Add Burger</button>
           </form>
         </div>
         
         <div class="col-md-3 border_right">
-          <h3>Tasks Completed</h3>
+          <h3>Devoured</h3>
 
-          <ul>
-          {{#each tasks}}
-            {{#if this.completed}}
-                <li id="task-completed-text">{{this.task}}</li>
-                <div id="task-date-complete">{{this.today}}</div>
+          <ol>
+          {{#each burgers}}
+            {{#if this.devoured}}
+                <li id="task-completed-text">{{this.burgers}}</li>
             {{/if}}
           {{/each}}
-        </ul>
+        </ol>
 
 
         </div>

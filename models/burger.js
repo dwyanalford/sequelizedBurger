@@ -1,23 +1,15 @@
+// note that sequelize will automatically pluralize the variable name
 module.exports = function(sequelize, DataTypes) {
-  var Tasks = sequelize.define("Tasks", {
-    task: DataTypes.STRING,
-    completed: DataTypes.BOOLEAN
+  var Burger = sequelize.define("Burger", {
+    burgers: {
+      type: DataTypes.STRING,
+      allowNull: false,
+    },
+    devoured: {
+      type: DataTypes.BOOLEAN,
+    }
   });
-  return Tasks;
+  return Burger;
 };
 
 
-// var Tasks = sequelize.define("Tasks", {
-//     title: {
-//       type: DataTypes.STRING,
-//       allowNull: false,
-//       validate: {
-//         len: [1]
-//       }
-//     },
-//     body: {
-//       type: DataTypes.TEXT,
-//       allowNull: false,
-//       len: [1]
-//     }
-//   }

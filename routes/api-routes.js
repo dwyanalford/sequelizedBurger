@@ -12,12 +12,16 @@ var db = require("../models");
 // =============================================================
 module.exports = function(app) {
 
-  // POST route for saving a new burger to database
-  app.post("/api/posts", function(req, res) {
-    db.Tasks.create(req.body).then(function(dbTasks) {
-      res.json(dbTasks);
-    });
-  });
+// // GET route for getting all of the posts
+//   app.get("/api/all", function(req, res) {
+//     db.Burger.findAll({
+//     }).then(function(dbBurger) {
+//       res.render(dbBurger);
+//       console.log(dbBurger);
+//     });
+//   });
+
+ 
 
   
 };
